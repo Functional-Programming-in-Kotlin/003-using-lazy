@@ -1,7 +1,8 @@
 package com.example.lazy_evaluation_delegadoy_by
 
 class Cart {
-    val paymentConfig = Cart.loadAndPreparePaymentConfig()
+    val paymentConfig: Map<String, String>
+        get() = Cart.loadAndPreparePaymentConfig()
 
     fun checkout() {
         if (paymentConfig["type"] == "card") {
@@ -20,4 +21,5 @@ class Cart {
 
 fun main(args: Array<String>) {
     val cart = Cart()
+
 }
