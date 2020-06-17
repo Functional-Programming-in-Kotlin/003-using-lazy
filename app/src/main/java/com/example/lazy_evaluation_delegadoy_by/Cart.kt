@@ -22,4 +22,6 @@ class Cart {
 fun main(args: Array<String>) {
     val cart = Cart()
 
+    cart.checkout()
+    cart.checkout()
 }
